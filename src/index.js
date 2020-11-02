@@ -42,14 +42,19 @@ var Grid = [];
 var gridIndex = 0;
 var crashed = new Array(false, false, false, false);
 
+let themeHasStarted = false;
 
-
-
+function startThemeOnceUserClick() {
+	if (!themeHasStarted) {
+		tronTheme1.play();
+		themeHasStarted = true;
+	} else {
+		document.removeEventListener('click', startThemeOnceUserClick)
+	}
+}
 function start() {
 
-	document.addEventListener('click', () => {
-		tronTheme1.play();
-	})
+	document.addEventListener('click', startThemeOnceUserClick)
 
 	pDiv = document.getElementById("participantsDiv");
 	cDiv = document.getElementById("contestantsDiv");
