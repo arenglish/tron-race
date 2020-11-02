@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+	@font-face {
+    font-family: TRON;
+    src: url(tr2n/Tr2n.ttf);
+	}
+
+	/* DIVS */
+	div {
+		margin: auto;
+    	width: 60%;
+    	border:1px solid #18c4e2;
+    	text-align: center;
+	}
+
+	#participantsDiv {
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
+		left: 50%;
+		margin-left: -250px;
+		width: 500px;
+		height: 500px;
+	}
+
+	#contestantsDiv {
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
+		left: 50%;
+		margin-left: -250px;
+		width: 500px;
+		height: 500px;
+	}
+
+	#raceDiv {
+		position: absolute;
+		top: 50%;
+		margin-top: -350px;
+		left: 50%;
+		margin-left: -400px;
+		width: 800px;
+		height: 700px;
+	}
+
+	#raceHeaderDiv {
+		border: none;
+		float: left;
+		width: 140px;
+		height: 700px;
+	}
+
+	#raceBoxDiv {
+		float: right;
+		width: 650px;
+		height: 700px;
+	}
+
+	#winnerDiv {
+		position: absolute;
+		top: 50%;
+		margin-top: -200px;
+		left: 50%;
+		margin-left: -200px;
+		width: 400px;
+		height: 400px;
+	}
+
+	#trailsDiv {
+		border: none;
+	}
+
+	h1 {
+		font-family: "TRON";
+		text-align: center;
+		color: #18c4e2;
+		<!--text-shadow: 0px 0px 2px #18c4e2;-->
+	}
+
+
+	/* HEADERS */
+	h3 {
+		font-family: "TRON";
+		text-align: left;
+		color: #18c4e2;
+		<!--text-shadow: 0px 0px 2px #18c4e2;-->
+	}
+
+	h3.cHeaders {
+		text-align: center;
+	}
+
+	h3.rHeaders {
+		padding-top: 45px;
+		padding-bottom: 45px;
+		text-align: center;
+	}
+
+
+
+	/* BUTTONS & INPUT*/
+	button {
+    	background-color: #18c4e2;
+    	border: solid;
+    	border-width: 1px;
+    	border-color: black;
+    	padding: 3px;
+	}
+	
+	#newRace {
+		background-color: #18c4e2; 
+		border-color: #18c4e2;
+		width: 100px;
+		height: 40px;
+		z-index: 4;
+	}
+
+
+
+
+	/* IMAGES */
+	img {
+		position: relative;
+		color: white;
+		
+	}
+
+	#i1 {
+		position: absolute;
+		top: 49%;
+		margin-top: -250px;
+		left: 50%;
+		margin-left: -220px;
+		width: 20px;
+		height: 20px;
+	}
+	#i2 {
+		position: absolute;
+		top: 49%;
+		margin-top: -125px;
+		left: 50%;
+		margin-left: -220px;
+		width: 20px;
+		height: 20px;
+	}
+	#i3 {
+		position: absolute;
+		top: 49%;
+		left: 50%;
+		margin-left: -220px;
+		width: 20px;
+		height: 20px;
+	}
+	#i4 {
+		position: absolute;
+		top: 49%;
+		margin-top: 125px;
+		left: 50%;
+		margin-left: -220px;
+		width: 20px;
+		height: 20px;
+	}
+	#i5 {
+		position: absolute;
+		top: 49%;
+		margin-top: 250px;
+		left: 50%;
+		margin-left: -220px;
+		width: 20px;
+		height: 20px;
+	}
+
+	#background-participants {
+		background-image: url("background.jpg");
+		background-size: cover;
+		z-index: -3;
+	}
+
+	#background-participants-texture {
+		position:absolute;
+		background-size: cover;
+		opacity: .5;
+		z-index: -2;
+	}
+
+	#divBackground1 {
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
+		left: 50%;
+		margin-left: -250px;
+		width: 500px;
+		height: 500px;
+		opacity: .9;
+		z-index: -1;
+	}
+
+	#divBackground2 {
+		position: absolute;
+		top: 50%;
+		margin-top: -250px;
+		left: 50%;
+		margin-left: -250px;
+		width: 500px;
+		height: 500px;
+		opacity: .9;
+		z-index: -1;
+	}
+
+	#divBackground3 {
+		position: absolute;
+		top: 50%;
+		margin-top: -350px;
+		left: 50%;
+		margin-left: -400px;
+		width: 800px;
+		height: 700px;
+		opacity: .9;
+		z-index: -1;
+	}
+
+	#divBackground4 {
+		position: absolute;
+		top: 50%;
+		margin-top: -200px;
+		left: 50%;
+		margin-left: -200px;
+		width: 400px;
+		height: 400px;
+		opacity: .9;
+		z-index: -1;
+	}
+	
+	#faceDiv {
+		border: none;
+		position: absolute;
+		transform: rotate(90deg);
+		z-index: 2;	
+		color: black; 
+		top: 50%;
+		left: 50%;
+		margin-top: -580px;
+		margin-left: -115px
+	}
+	
+	#glasses {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: 520px;
+		margin-left: 500px
+		width: 200px;
+		height: 20px;
+		z-index: 3;
+	}
+	
+
+
+</style>
+</head>
+
+<body style="background-color: black" id="background-participants">
+	<audio id="scream1">
+  		<source src="audio/wilhelm-scream1.wav" type="audio/wav" preload="auto">
+	</audio>
+	<audio id="scream2">
+  		<source src="audio/wilhelm-scream5.wav" type="audio/wav" preload="auto">
+	</audio>
+	<audio id="scream3">
+  		<source src="audio/wilhelm-scream4.wav" type="audio/wav" preload="auto">
+	</audio>
+	<audio id="scream4">
+  		<source src="audio/wilhelm-scream5.wav" type="audio/wav" preload="auto">
+	</audio>
+	<audio id="scream5">
+  		<source src="audio/wilhelm-scream4.wav" type="audio/wav" preload="auto">
+	</audio>
+	<audio loop id="tronTheme1">
+  		<source src="audio/tron-theme1.mp3" type="audio/mp3" preload="auto">
+	</audio>
+	<audio loop id="tronTheme2-cut">
+		<source src="audio/tron-theme2-cut.mp3" type="audio/mp3" preload="auto">
+	</audio>
+
+	
+
+	<script src="index.js"></script>
+
+	<div id="participantsDiv" display="none">
+		<img src="div-background.jpg" alt="background" id="divBackground1">
+	</div>
+
+	<div id="contestantsDiv" display="none">
+		<img src="div-background.jpg" alt="background" id="divBackground2">
+	</div>
+
+	<div id="raceDiv" display="none">
+		<img src="div-background.jpg" alt="background" id="divBackground3">
+		<div id="raceHeaderDiv" display="none"></div>
+		<div id="raceBoxDiv" display="none"></div>
+	</div>
+
+	<div id="winnerDiv" display="none">
+		<img src="div-background.jpg" alt="background" id="divBackground4">
+		<img src="glasses.png" id="glasses" alt="glasses">
+		<h1><div id="faceDiv">; )</div></h1>
+	</div>
+
+	<div id="trailsDiv" display="none">
+	<span></span></div>
+	
+</body>
+
+
+</html>
