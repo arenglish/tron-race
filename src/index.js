@@ -47,7 +47,10 @@ var crashed = new Array(false, false, false, false);
 
 function start() {
 
-	tronTheme1.play();
+	document.addEventListener('click', () => {
+		tronTheme1.play();
+	})
+
 	pDiv = document.getElementById("participantsDiv");
 	cDiv = document.getElementById("contestantsDiv");
 	rDiv = document.getElementById("raceDiv");
